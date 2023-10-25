@@ -6,6 +6,11 @@
     "routes": [
       { "src": "/(.*)", "dest": "server.js" }
     ],
-    "functions": { "api/*": { "runtime": "nodejs16.x" } }
+    "functions": {
+        "my-function": {
+          "runtime": "nodejs16.x",
+          "memory": 512
+        }
+    }
   }
   
