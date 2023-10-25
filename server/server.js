@@ -35,7 +35,7 @@ app.use('/',(req,res)=>{
   res.json('hello');
 })
 // Port
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 //listen
 app.listen(PORT, () => {
   console.log(
