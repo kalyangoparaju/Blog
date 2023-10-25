@@ -31,11 +31,11 @@ app.use('/',(req,res)=>{
   res.json('hello');
 })
 // Port
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
 //listen
 app.listen(PORT, () => {
   console.log(
-    `Server Running on ${process.env.DEV_MODE} mode port no ${PORT}`.bgCyan
+    `Server Running on  mode port no ${PORT}`.bgCyan
       .white
   );
 });
