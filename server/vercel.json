@@ -1,7 +1,11 @@
 {
-    "name": "Blog",
     "version": 2,
-    "builds": [{ "src": "server.js", "use": "@now/node" }],
-    "routes": [{ "src": "/(.*)", "dest": "server.js" }]
+    "builds": [
+      { "src": "server.js", "use": "@now/node", "config": { "maxLambdaSize": "5mb" } }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "server.js" }
+    ],
+    "functions": { "api/*": { "runtime": "nodejs16.x" } }
   }
   
