@@ -4,6 +4,7 @@
   "description": "blog app",
   "main": "server.js",
   "scripts": {
+    "postinstall": "npm rebuild bcrypt",
     "start": "node serevr.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix ./client",
