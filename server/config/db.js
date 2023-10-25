@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 // Load environment variables from the .env file
 dotenv.config();
 mongoose.set("strictQuery", false);
-const url = process.env.MONGO_URL;
+const url ="mongodb+srv://kalyan77:kalyan77@cluster0.frny3cq.mongodb.net/?retryWrites=true&w=majority";
 
 const connectDB = async () => {
   try {
