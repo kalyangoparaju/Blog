@@ -27,6 +27,9 @@ app.use(morgan("dev"));
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/blog", blogRoutes);
 
+app.use('/',(req,res)=>{
+  res.json('hello');
+})
 // Port
 const PORT = process.env.PORT || 8080;
 //listen
