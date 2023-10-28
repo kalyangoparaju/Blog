@@ -42,4 +42,5 @@ app.listen(PORT, () => {
     `Server Running on  mode port no ${PORT}`.bgCyan
       .white
   );
+  sessionStorage.setItem("info","Setver is runing on"+PORT)
 });
