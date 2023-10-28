@@ -39,7 +39,8 @@ app.use('/',(req,res)=>{
 // Port
 const PORT = process.env.PORT || 8080;
 //listen
-app.listen(PORT, () => {
+app.listen(PORT, (req,res) => {
+  res.json(PORT)
   console.log(
     `Server Running on  mode port no ${PORT}`.bgCyan
       .white
