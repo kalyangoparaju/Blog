@@ -9,12 +9,12 @@ const {
 const router = express.Router();
 
 // GET ALL USERS || GET
-router.get("/all-users", getAllUsers);
+router.get("https://blog-ten-ashen-70.vercel.app/all-users", getAllUsers);
 
 // CREATE USER || POST
-router.post("/register", registerController);
+router.post("https://blog-ten-ashen-70.vercel.app/register", registerController);
 
 //LOGIN || POST
-router.post("/login", loginController);
+router.post("https://blog-ten-ashen-70.vercel.app/login", loginController);
 
 module.exports = router;
