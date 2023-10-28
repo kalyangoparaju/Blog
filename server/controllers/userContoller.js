@@ -61,7 +61,7 @@ exports.getAllUsers = async (req, res) => {
 
 //login
 exports.loginController = async (req, res) => {
-  res.send(req.body);
+  res.send("message");
   try {
     const { email, password } = req.body;
     //validation
