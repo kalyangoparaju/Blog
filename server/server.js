@@ -28,8 +28,8 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 //routes
-app.use("/api/v1/user", userRoutes);
-app.use("/api/v1/blog", blogRoutes);
+app.use("https://blog-ten-ashen-70.vercel.app/api/v1/user", userRoutes);
+app.use("https://blog-ten-ashen-70.vercel.app/api/v1/blog", blogRoutes);
 
 app.use('/',(req,res)=>{
   res.json('hello');
