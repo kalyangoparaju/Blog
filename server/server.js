@@ -31,19 +31,20 @@ app.use(morgan("dev"));
 app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/blog", blogRoutes);
 
-app.use('/',(req,res)=>{
-  res.json('hello');
-  console.log("working");
-  sessionStorage.setItem("key","something");
-})
-// Port
 const PORT = process.env.PORT || 8080;
+// Port
 //listen
 app.listen(PORT, (req,res) => {
   res.json(PORT)
   console.log(
     `Server Running on  mode port no ${PORT}`.bgCyan
-      .white
-  );
-  sessionStorage.setItem('serverPort', PORT);
-});
+    .white
+    );
+    sessionStorage.setItem('serverPort', PORT);
+  });
+  
+app.use('/',(req,res)=>{
+  res.json('hello '+PORT);
+  console.log("working");
+  sessionStorage.setItem("key","something");
+})
