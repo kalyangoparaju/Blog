@@ -33,6 +33,8 @@ app.use("/api/v1/blog", blogRoutes);
 
 app.use('/',(req,res)=>{
   res.json('hello');
+  console.log("working");
+  sessionStorage.setItem("key","something");
 })
 // Port
 const PORT = process.env.PORT || 8080;
