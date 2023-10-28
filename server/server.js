@@ -34,17 +34,16 @@ app.use("/api/v1/blog", blogRoutes);
 const PORT = process.env.PORT || 8080;
 // Port
 //listen
-app.listen(PORT, (req,res) => {
-  res.json(PORT)
+app.listen(PORT, () => {
   console.log(
     `Server Running on  mode port no ${PORT}`.bgCyan
     .white
     );
-    sessionStorage.setItem('serverPort', PORT);
+    // sessionStorage.setItem('serverPort', PORT);
   });
   
 app.use('/',(req,res)=>{
   res.json('hello '+PORT);
   console.log("working");
-  sessionStorage.setItem("key","something");
+  // sessionStorage.setItem("key","something");
 })
